@@ -18,7 +18,7 @@
 		<div class="col-sm-10 row">
 			<?php
 				
-				$dbc=mysqli_connect("localhost","root","Dattu@3121","RevelsTest") or die('cant connect');
+				$dbc=mysqli_connect("localhost","root","","RevelsTest") or die('cant connect');
 
 				$name = $_POST['name'];
 				$RegNo = $_POST['RegNo'];
@@ -89,7 +89,7 @@
 					<?php
 				}
 				if(!empty($teamID)){
-					$con = $dbc=mysqli_connect("localhost","root","Dattu@3121","RevelsTest") or die('cant connect');
+					$con = $dbc=mysqli_connect("localhost","root","","RevelsTest") or die('cant connect');
 					if($teamID[0]=='F'){
 						$query3 = "SELECT * FROM Football WHERE teamID = '$teamID'";
 					}
@@ -134,7 +134,7 @@
 							}
 						}
 				function search_details($delegate_number){
-					$connection = mysqli_connect("localhost","root","Dattu@3121","RevelsTest") or die('cant connect');
+					$connection = mysqli_connect("localhost","root","","RevelsTest") or die('cant connect');
 					$query1 = "SELECT * FROM delegate_card_generation WHERE delegate_number = '$delegate_number'";
 					$result1 = mysqli_query($connection,$query1) or die(mysqli_error($connection));
 					$row1 = mysqli_fetch_array($result1);
