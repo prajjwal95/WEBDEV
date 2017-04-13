@@ -2,12 +2,12 @@
 
 $host = 'locahost';
 $user = 'root';
-$pass = 'Dattu@3121';
+$pass = '';
 $db = 'RevelsTest'; 
 
 $newdelnumber = 0;
 
-$dbc=mysqli_connect("localhost","root","Dattu@3121","RevelsTest") or die('cant connect:');
+$dbc=mysqli_connect("localhost","root","","RevelsTest") or die('cant connect:');
 
 $name = $_POST['name'];
 $RegNo = $_POST['RegNo'];
