@@ -1,6 +1,6 @@
 <?php
 
-$dbc=mysqli_connect("localhost","root","Dattu@3121","RevelsTest") or die('cant connect:');
+$dbc=mysqli_connect("localhost","root","","RevelsTest") or die('cant connect:');
 
 $sport = $_POST['sport'];
 $teamid = $_POST['teamid'];
