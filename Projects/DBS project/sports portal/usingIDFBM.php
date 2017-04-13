@@ -21,7 +21,7 @@
 	session_start();
 	$teamID = $_POST['teamID'];
 	$query;
-	$dbc=mysqli_connect("localhost","root","Dattu@3121","RevelsTest") or die('cant connect');
+	$dbc=mysqli_connect("localhost","root","","RevelsTest") or die('cant connect');
 	if($teamID[0]=='F')
 		{$query = "SELECT * FROM Football HAVING teamID = '$teamID'";}
 	elseif($teamID[0]=='B')
@@ -86,7 +86,7 @@
 			}
 	}
 	function search_details($delegate_number){
-		$con = mysqli_connect("localhost","root","Dattu@3121","RevelsTest") or die('cant connect');
+		$con = mysqli_connect("localhost","root","","RevelsTest") or die('cant connect');
 		$query1 = "SELECT * FROM delegate_card_generation WHERE delegate_number = '$delegate_number'";
 		$result1 = mysqli_query($con,$query1) or die(mysqli_error($con));
 		$row1 = mysqli_fetch_array($result1);
