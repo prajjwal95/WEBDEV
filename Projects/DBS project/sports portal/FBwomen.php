@@ -48,7 +48,7 @@
 						$alldelegate = $alldelegate.',';
 					}
 					//generating new delegate number
-					$dbc=mysqli_connect("localhost","root","Dattu@3121","RevelsTest") or die("can't connect");
+					$dbc=mysqli_connect("localhost","root","","RevelsTest") or die("can't connect");
 					$query1 = "SELECT * FROM Football";
 					$result1 = mysqli_query($dbc,$query1) or die(mysqli_error($dbc));
 
@@ -79,7 +79,7 @@
 				/*function validate_delegate($delegate)
 
 				{
-					$con=mysqli_connect("localhost","root","Dattu@3121","RevelsTest")or die("can't connect");
+					$con=mysqli_connect("localhost","root","","RevelsTest")or die("can't connect");
 					$query = "SELECT * FROM delegate_card_generation WHERE Gender = 'female'";
 					$result = mysqli_query($con,$query) or die("hello");
 					while ($row = mysqli_fetch_array($result)){
@@ -93,7 +93,7 @@
 				function validate_delegate($delegate)
 
 				{
-					$con=mysqli_connect("localhost","root","Dattu@3121","RevelsTest")or die("can't connect");
+					$con=mysqli_connect("localhost","root","","RevelsTest")or die("can't connect");
 					$query = "SELECT * FROM delegate_card_generation";
 					$result = mysqli_query($con,$query) or die("hello");
 					while ($row = mysqli_fetch_array($result)){
