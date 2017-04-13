@@ -22,7 +22,7 @@
 					$alldelegate = $_SESSION["alldelegate"];
 					$gender = $_SESSION["gender"];
 					$sport = $_SESSION["sport"];
-					$dbc = $dbc=mysqli_connect("localhost","root","Dattu@3121","RevelsTest") or die("can't connect");
+					$dbc = $dbc=mysqli_connect("localhost","root","","RevelsTest") or die("can't connect");
 					if ($sport == "football") {
 						$query = "INSERT INTO Football (teamID,gender,delegate_numbers) VALUES ('".$newteamID."','".$gender."' ,'".$alldelegate."')";
 					}
